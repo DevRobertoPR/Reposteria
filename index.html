@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SweetHome | La casa del antojo</title>
+    <meta
+      name="description"
+      content="SweetHome: pasteles, pays, empanadas, brownies, besos de nuez, orajascas y fresas con crema. Cotiza por WhatsApp."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <!-- HEADER -->
+    <header class="site-header" id="inicio">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <img class="brand-logo" src="img/logo.jpg" alt="Logo de SweetHome" />
+          <span class="brand-text">
+            <strong>SweetHome</strong>
+            <span class="brand-tagline">La casa del antojo</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
+          <span class="sr-only">Abrir menú</span>
+        </button>
+
+        <nav class="site-nav" aria-label="Navegación principal">
+          <ul id="menu" class="menu">
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#temporada">Temporada</a></li>
+            <li><a href="#como-pedir">Cómo pedir</a></li>
+            <li><a href="#redes">Redes</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- HERO -->
+      <section class="hero" aria-label="Presentación">
+        <div class="container hero-grid" id="contenido">
+          <div class="hero-copy">
+            <p class="kicker">Repostería hogareña</p>
+            <h1>Antojos dulces hechos en casa, listos para tu día.</h1>
+            <p class="lead">
+              Pasteles, pays, empanadas, brownies, besos de nuez, orajascas y
+              fresas con crema con toppings. Cotiza rápido por WhatsApp.
+            </p>
+
+            <div class="hero-cta">
+              <a
+                class="btn primary"
+                id="waMain"
+                href="https://wa.me/521XXXXXXXXXX?text=Hola%20SweetHome%2C%20quiero%20cotizar%20un%20pedido%20%F0%9F%8D%B0"
+                target="_blank"
+                rel="noopener"
+              >
+                Cotizar por WhatsApp
+              </a>
+              <a class="btn ghost" href="#productos">Ver productos</a>
+            </div>
+
+            <ul class="hero-badges" aria-label="Beneficios">
+              <li>Hecho al momento</li>
+              <li>Por encargo</li>
+              <li>Entrega / recolección</li>
+            </ul>
+          </div>
+
+          <div class="hero-media" aria-label="Imagen destacada">
+            <div class="hero-card">
+              <img
+                src="img/pastel.jpg"
+                alt="Postres de SweetHome"
+                loading="lazy"
+              />
+              <div class="hero-card-caption">
+                <strong>Pedidos personalizados</strong>
+                <span>Pregunta por tamaños, sabores y toppings</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- MAIN -->
+    <main class="site-main">
+      <!-- PRODUCTOS -->
+      <section class="section" id="productos" aria-labelledby="productos-title">
+        <div class="container">
+          <header class="section-head">
+            <h2 id="productos-title">Productos</h2>
+            <p>
+              Explora por categorías. Cada producto tiene fotos y cotización
+              directa por WhatsApp.
+            </p>
+          </header>
+
+          <!-- Categorías colapsables: menos abrumador -->
+          <div
+            class="accordions"
+            role="region"
+            aria-label="Categorías de productos"
+          >
+            <!-- PASTELES -->
+            <details class="acc" open>
+              <summary class="acc-summary">Pasteles</summary>
+              <div class="acc-body cards">
+                <article
+                  class="card"
+                  data-name="Pastel de zanahoria"
+                  data-images="img/pastel.jpg,img/pastel2.jpg"
+                >
+                  <img
+                    src="img/pastel.jpg"
+                    alt="Pastel de zanahoria"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Pastel de zanahoria</h3>
+                    <p>Esponjoso y casero. Ideal para evento o antojo.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="card"
+                  data-name="Pastel Lotus"
+                  data-images="img/pastel_lotus.jpg"
+                >
+                  <img
+                    src="img/pastel_lotus.jpg"
+                    alt="Pastel Lotus"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Pastel Lotus</h3>
+                    <p>Toque especial con Lotus. Pregunta por tamaño.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </details>
+
+            <!-- PAYS (subtipos) -->
+            <details class="acc">
+              <summary class="acc-summary">Pays</summary>
+              <div class="acc-body cards">
+                <article
+                  class="card"
+                  data-name="Pay de fresa"
+                  data-images="img/pay_fresa.jpg"
+                >
+                  <img
+                    src="img/pay_fresa.jpg"
+                    alt="Pay de fresa"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Pay de fresa</h3>
+                    <p>Cremoso y fresco. Ideal para compartir.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="card"
+                  data-name="Pay de mango"
+                  data-images="img/pay_mango.jpg"
+                >
+                  <img
+                    src="img/pay_mango.jpg"
+                    alt="Pay de mango"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Pay de mango</h3>
+                    <p>Dulce y tropical. Pregunta por disponibilidad.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="card"
+                  data-name="Pay de kiwi"
+                  data-images="img/pay_kiwi.jpg"
+                >
+                  <img
+                    src="img/pay_kiwi.jpg"
+                    alt="Pay de kiwi"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Pay de kiwi</h3>
+                    <p>Toque ácido y delicioso. Pregunta por tamaño.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="card"
+                  data-name="Pay tortuga"
+                  data-images="img/pay_tortuga.jpg,img/pay_tortuga2.jpg"
+                >
+                  <img
+                    src="img/pay_tortuga.jpg"
+                    alt="Pay tortuga"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Pay tortuga</h3>
+                    <p>cajeta + nuez . Pregunta por versión.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </details>
+
+            <!-- EMPANADAS (subtipos) -->
+            <details class="acc">
+              <summary class="acc-summary">Empanadas</summary>
+              <div class="acc-body cards">
+                <article
+                  class="card"
+                  data-name="Empanada de cajeta"
+                  data-images="img/empanada_cajeta.jpg"
+                >
+                  <img
+                    src="img/empanada_cajeta.jpg"
+                    alt="Empanada de cajeta"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Empanada de cajeta</h3>
+                    <p>Tradicional y doradita. Ideal para acompañar café.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="card"
+                  data-name="Empanada de piña"
+                  data-images="img/empanada_piña.jpg"
+                >
+                  <img
+                    src="img/empanada_piña.jpg"
+                    alt="Empanada de piña"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Empanada de piña</h3>
+                    <p>Dulce y casera. Pide por pieza o por docena.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="card"
+                  data-name="Empanada de fresa"
+                  data-images="img/empanada_fresa.jpg"
+                >
+                  <img
+                    src="img/empanada_fresa.jpg"
+                    alt="Empanada de fresa"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Empanada de fresa</h3>
+                    <p>Relleno dulce y suave. Pregunta por disponibilidad.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </details>
+
+            <!-- POSTRES -->
+            <details class="acc">
+              <summary class="acc-summary">Postres</summary>
+              <div class="acc-body cards">
+                <article
+                  class="card"
+                  data-name="Brownies"
+                  data-images="img/brownie.jpg,img/brownie_2.jpg,img/brownie_3.jpg"
+                >
+                  <img src="img/brownie.jpg" alt="Brownies" loading="lazy" />
+                  <div class="card-body">
+                    <h3>Brownies</h3>
+                    <p>Clásicos o con topping. Pide por pieza o charola.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="card"
+                  data-name="Besos de nuez"
+                  data-images="img/beso_nuez.jpg,img/beso_nuez_2.jpg"
+                >
+                  <img
+                    src="img/beso_nuez.jpg"
+                    alt="Besos de nuez"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Besos de nuez</h3>
+                    <p>Suavecitos y dulces. Ideales para regalar.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="card"
+                  data-name="Ojarascas"
+                  data-images="img/ojarasca.jpg,img/ojarasca_2.jpg"
+                >
+                  <img src="img/ojarasca.jpg" alt="Orajascas" loading="lazy" />
+                  <div class="card-body">
+                    <h3>Orajascas</h3>
+                    <p>Tradición casera. Crujientes y deliciosas.</p>
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- FRESAS CON CREMA con toppings (subtipos) -->
+                <article
+                  class="card"
+                  data-name="Fresas con crema"
+                  data-images="img/fresas.jpg,img/fresa_ferrero.jpg,img/fresa_bubulubu.jpg,img/fresa_pay.jpg,img/fresa_pinguino.jpg"
+                  data-options="Ferrero,Bubulubu,Pay de queso,Pingüino"
+                >
+                  <img
+                    src="img/fresas.jpg"
+                    alt="Fresas con crema"
+                    loading="lazy"
+                  />
+                  <div class="card-body">
+                    <h3>Fresas con crema</h3>
+                    <p>
+                      Elige topping: Ferrero, Bubulubu, Gansito o Pay de queso.
+                    </p>
+
+                    <div class="option-row">
+                      <label class="sr-only" for="opt-fresas">Topping</label>
+                      <select
+                        class="select js-option"
+                        id="opt-fresas"
+                        aria-label="Elige un topping"
+                      >
+                        <option value="">Elige topping…</option>
+                        <option>Ferrero</option>
+                        <option>Bubulubu</option>
+                        <option>Gansito</option>
+                        <option>Pay de queso</option>
+                      </select>
+                    </div>
+
+                    <div class="card-actions">
+                      <button class="btn small ghost js-photos" type="button">
+                        Ver fotos
+                      </button>
+                      <button class="btn small primary js-quote" type="button">
+                        Cotizar
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEMPORADA -->
+      <section
+        class="section alt"
+        id="temporada"
+        aria-labelledby="temporada-title"
+      >
+        <div class="container">
+          <header class="section-head">
+            <h2 id="temporada-title">Temporada</h2>
+            <p>Disponibles en fechas especiales. Cotiza por WhatsApp.</p>
+          </header>
+
+          <div class="cards">
+            <article
+              class="card"
+              data-name="Champurrado"
+              data-images="img/champurrado.jpg"
+            >
+              <img src="img/champurrado.jpg" alt="Champurrado" loading="lazy" />
+              <div class="card-body">
+                <h3>Champurrado</h3>
+                <p>Para días fríos. Pregunta por porciones o litro.</p>
+                <div class="card-actions">
+                  <button class="btn small ghost js-photos" type="button">
+                    Ver fotos
+                  </button>
+                  <button class="btn small primary js-quote" type="button">
+                    Cotizar
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="card"
+              data-name="Rosca de Reyes"
+              data-images="img/rosca.jpg"
+            >
+              <img src="img/rosca.jpg" alt="Rosca de Reyes" loading="lazy" />
+              <div class="card-body">
+                <h3>Rosca de Reyes</h3>
+                <p>Aparta con tiempo. Pregunta por tamaños.</p>
+                <div class="card-actions">
+                  <button class="btn small ghost js-photos" type="button">
+                    Ver fotos
+                  </button>
+                  <button class="btn small primary js-quote" type="button">
+                    Cotizar
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CÓMO PEDIR -->
+      <section class="section" id="como-pedir" aria-labelledby="pedir-title">
+        <div class="container">
+          <header class="section-head">
+            <h2 id="pedir-title">Cómo pedir</h2>
+            <p>En 3 pasos: eliges, cotizas por WhatsApp y confirmas.</p>
+          </header>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step-num" aria-hidden="true">1</span>
+              <div class="step-body">
+                <h3>Elige producto</h3>
+                <p>Revisa categorías y abre fotos si quieres ver más.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">2</span>
+              <div class="step-body">
+                <h3>Cotiza por WhatsApp</h3>
+                <p>Te mandamos precio, disponibilidad y tiempo de entrega.</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-num" aria-hidden="true">3</span>
+              <div class="step-body">
+                <h3>Confirma</h3>
+                <p>Acordamos fecha, entrega o recolección.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- REDES -->
+      <section class="section alt" id="redes" aria-labelledby="redes-title">
+        <div class="container">
+          <header class="section-head">
+            <h2 id="redes-title">Síguenos</h2>
+            <p>Más fotos, promociones y productos nuevos en redes.</p>
+          </header>
+
+          <div class="socials">
+            <!-- Cambia URLs reales -->
+            <a
+              class="social"
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              <strong>Facebook</strong>
+              <span class="muted">Ver publicaciones</span>
+            </a>
+
+            <a
+              class="social"
+              href="https://instagram.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              <strong>Instagram</strong>
+              <span class="muted">Ver historias</span>
+            </a>
+
+            <a
+              class="social"
+              href="https://wa.me/521XXXXXXXXXX"
+              target="_blank"
+              rel="noopener"
+            >
+              <strong>WhatsApp</strong>
+              <span class="muted">Cotizar pedido</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> SweetHome — La casa del antojo.</p>
+        <ul class="footer-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#redes">Redes</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- MODAL / LIGHTBOX -->
+    <div
+      class="modal"
+      id="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Galería de fotos"
+    >
+      <div class="modal-backdrop" data-close="true"></div>
+
+      <div class="modal-panel" role="document">
+        <button
+          class="modal-close"
+          type="button"
+          data-close="true"
+          aria-label="Cerrar"
+        >
+          ✕
+        </button>
+
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalTitle">Fotos</h3>
+        </div>
+
+        <div class="modal-body">
+          <button
+            class="modal-nav prev"
+            type="button"
+            aria-label="Foto anterior"
+          >
+            ‹
+          </button>
+          <img id="modalImg" class="modal-img" src="" alt="" />
+          <button
+            class="modal-nav next"
+            type="button"
+            aria-label="Siguiente foto"
+          >
+            ›
+          </button>
+        </div>
+
+        <div class="modal-footer">
+          <div id="modalDots" class="dots" aria-label="Indicadores"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
