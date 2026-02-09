@@ -1,16 +1,19 @@
 :root {
-  --bg: #fff7f3;
-  --paper: #ffffff;
-  --text: #2f2422;
-  --muted: #6a5a58;
-  --line: rgba(47, 36, 34, 0.14);
+  /* Base */
+  --bg: #fdfafa; /* blanco suave */
+  --paper: #ffffff; /* tarjetas */
+  --text: #2f2a2a; /* gris oscuro (descanso visual) */
+  --muted: #6f6a6a; /* texto secundario */
+  --line: rgba(47, 42, 42, 0.12);
 
-  --brand: #e76f8a; /* principal */
-  --brand-2: #ffd7e1; /* suave */
-  --accent: #7b4a3c; /* contraste */
+  /* Colores principales */
+  --brand: #e28aac; /* rosa pastel (principal) */
+  --brand-2: #cfeeed; /* turquesa muy suave */
+  --accent: #3fa0a0; /* turquesa medio (detalles/hover) */
 
+  /* UI */
   --radius: 18px;
-  --shadow: 0 16px 40px rgba(47, 36, 34, 0.12);
+  --shadow: 0 14px 34px rgba(47, 42, 42, 0.1);
 }
 
 * {
