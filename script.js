@@ -1,5 +1,7 @@
 const $ = (selector, parent = document) => parent.querySelector(selector);
-const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
+const $$ = (selector, parent = document) => [
+  ...parent.querySelectorAll(selector),
+];
 
 const yearNode = $("#year");
 if (yearNode) yearNode.textContent = new Date().getFullYear();
@@ -140,7 +142,8 @@ function nextSlide() {
 
 function prevSlide() {
   if (!currentImages.length) return;
-  currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+  currentIndex =
+    (currentIndex - 1 + currentImages.length) % currentImages.length;
   renderSlide();
 }
 
@@ -173,7 +176,7 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") prevSlide();
 });
 
-const sections = $$('main section[id]');
+const sections = $$("main section[id]");
 const navLinks = $$('.menu a[href^="#"]');
 
 if (sections.length && navLinks.length && "IntersectionObserver" in window) {
@@ -190,8 +193,8 @@ if (sections.length && navLinks.length && "IntersectionObserver" in window) {
     },
     {
       threshold: 0.35,
-      rootMargin: "-20% 0px -50% 0px"
-    }
+      rootMargin: "-20% 0px -50% 0px",
+    },
   );
 
   sections.forEach((section) => observer.observe(section));

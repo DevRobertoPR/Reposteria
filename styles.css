@@ -33,8 +33,16 @@ body {
   font-family: "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.6;
   background:
-    radial-gradient(circle at top left, rgba(15, 159, 176, 0.18), transparent 35%),
-    radial-gradient(circle at 95% 10%, rgba(15, 109, 121, 0.18), transparent 28%),
+    radial-gradient(
+      circle at top left,
+      rgba(15, 159, 176, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 95% 10%,
+      rgba(15, 109, 121, 0.18),
+      transparent 28%
+    ),
     linear-gradient(180deg, #f9feff 0%, #eef8fa 100%);
 }
 
@@ -89,7 +97,11 @@ select {
 }
 
 .section.alt {
-  background: linear-gradient(180deg, rgba(15, 159, 176, 0.05), rgba(255, 255, 255, 0.55));
+  background: linear-gradient(
+    180deg,
+    rgba(15, 159, 176, 0.05),
+    rgba(255, 255, 255, 0.55)
+  );
 }
 
 .section-head {
@@ -342,7 +354,11 @@ select {
 
 .hero-card-logo {
   padding: 1.2rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(217, 243, 246, 0.62));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.82),
+    rgba(217, 243, 246, 0.62)
+  );
 }
 
 .hero-card-logo img {
@@ -382,7 +398,10 @@ select {
   border: 1px solid transparent;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .btn:hover {
@@ -645,7 +664,11 @@ select {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: linear-gradient(135deg, rgba(15, 159, 176, 0.1), rgba(255, 255, 255, 0.88));
+  background: linear-gradient(
+    135deg,
+    rgba(15, 159, 176, 0.1),
+    rgba(255, 255, 255, 0.88)
+  );
 }
 
 .cta-banner h2 {
