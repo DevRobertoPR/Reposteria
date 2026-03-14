@@ -1,105 +1,117 @@
-const $ = (sel, parent = document) => parent.querySelector(sel);
-const $$ = (sel, parent = document) => Array.from(parent.querySelectorAll(sel));
+const $ = (selector, parent = document) => parent.querySelector(selector);
+const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
 
-// Año footer
-$("#year").textContent = new Date().getFullYear();
+const yearNode = $("#year");
+if (yearNode) yearNode.textContent = new Date().getFullYear();
 
-// ====== Mobile nav toggle ======
 const toggleBtn = $(".nav-toggle");
 const menu = $("#menu");
 
 function setMenu(open) {
+  if (!toggleBtn || !menu) return;
   menu.classList.toggle("is-open", open);
   toggleBtn.setAttribute("aria-expanded", String(open));
-  $(".sr-only", toggleBtn).textContent = open ? "Cerrar menú" : "Abrir menú";
+  const srText = $(".sr-only", toggleBtn);
+  if (srText) srText.textContent = open ? "Cerrar menú" : "Abrir menú";
 }
 
-toggleBtn.addEventListener("click", () => {
-  const isOpen = menu.classList.contains("is-open");
-  setMenu(!isOpen);
-});
+if (toggleBtn && menu) {
+  toggleBtn.addEventListener("click", () => {
+    setMenu(!menu.classList.contains("is-open"));
+  });
 
-$$(".menu a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+  $$(".menu a").forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
+  });
 
-document.addEventListener("click", (e) => {
-  const isMobile = window.matchMedia("(max-width: 720px)").matches;
-  if (!isMobile) return;
-  const clickedInside =
-    e.target.closest(".site-nav") || e.target.closest(".nav-toggle");
-  if (!clickedInside) setMenu(false);
-});
+  document.addEventListener("click", (event) => {
+    const isMobile = window.matchMedia("(max-width: 720px)").matches;
+    if (!isMobile) return;
 
-// ====== WhatsApp base number (toma el del botón principal) ======
+    const clickedInside =
+      event.target.closest(".site-nav") || event.target.closest(".nav-toggle");
+
+    if (!clickedInside) setMenu(false);
+  });
+}
+
 function getWaBase() {
-  const wa = $("#waMain");
-  if (!wa) return "https://wa.me/521XXXXXXXXXX";
-  return wa.href.split("?")[0];
+  const waMain = $("#waMain");
+  if (!waMain) return "https://wa.me/521XXXXXXXXXX";
+  return waMain.href.split("?")[0];
 }
 
 function openWhatsAppQuote(productName, optionValue = "") {
   const base = getWaBase();
-  const extra = optionValue ? ` (${optionValue})` : "";
+  const optionText = optionValue ? ` (${optionValue})` : "";
   const text =
-    `Hola SweetHome, quiero cotizar: ${productName}${extra}. ` +
-    `¿Me dices precio, disponibilidad y tiempo de entrega?`;
-  const url = `${base}?text=${encodeURIComponent(text)}`;
-  window.open(url, "_blank", "noopener");
+    `Hola Sweet Home, quiero cotizar: ${productName}${optionText}. ` +
+    "¿Me compartes precio, disponibilidad y tiempo de entrega?";
+
+  window.open(`${base}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
 }
 
-// Botones cotizar
-$$(".js-quote").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const card = btn.closest(".card");
-    const name = card?.dataset?.name || "un producto";
+$$(".js-quote").forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".card");
+    const productName = card?.dataset?.name || "un producto";
     const select = card?.querySelector(".js-option");
     const option = select?.value?.trim() || "";
-    openWhatsAppQuote(name, option);
+    openWhatsAppQuote(productName, option);
   });
 });
 
-// ====== Modal / Lightbox con carrusel ======
 const modal = $("#modal");
 const modalTitle = $("#modalTitle");
 const modalImg = $("#modalImg");
 const dots = $("#modalDots");
+const nextButton = $(".modal-nav.next");
+const prevButton = $(".modal-nav.prev");
 
 let currentImages = [];
 let currentIndex = 0;
 
 function parseImages(card) {
-  const raw = (card.dataset.images || "").trim();
+  const raw = (card?.dataset?.images || "").trim();
   return raw
     ? raw
         .split(",")
-        .map((s) => s.trim())
+        .map((image) => image.trim())
         .filter(Boolean)
     : [];
 }
 
 function renderDots() {
+  if (!dots) return;
+
   dots.innerHTML = "";
-  currentImages.forEach((_, idx) => {
-    const b = document.createElement("button");
-    b.className = "dot" + (idx === currentIndex ? " is-active" : "");
-    b.type = "button";
-    b.setAttribute("aria-label", `Ir a foto ${idx + 1}`);
-    b.addEventListener("click", () => {
-      currentIndex = idx;
+
+  currentImages.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = `dot${index === currentIndex ? " is-active" : ""}`;
+    dot.setAttribute("aria-label", `Ir a foto ${index + 1}`);
+
+    dot.addEventListener("click", () => {
+      currentIndex = index;
       renderSlide();
     });
-    dots.appendChild(b);
+
+    dots.appendChild(dot);
   });
 }
 
 function renderSlide() {
-  if (!currentImages.length) return;
+  if (!modalImg || !currentImages.length) return;
   const src = currentImages[currentIndex];
   modalImg.src = src;
-  modalImg.alt = `${modalTitle.textContent} - foto ${currentIndex + 1}`;
+  modalImg.alt = `${modalTitle?.textContent || "Galería"} - foto ${currentIndex + 1}`;
   renderDots();
 }
 
 function openModal(title, images) {
+  if (!modal || !modalTitle) return;
+
   currentImages = images;
   currentIndex = 0;
   modalTitle.textContent = title || "Fotos";
@@ -110,6 +122,8 @@ function openModal(title, images) {
 }
 
 function closeModal() {
+  if (!modal || !modalImg) return;
+
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
   modalImg.src = "";
@@ -123,40 +137,62 @@ function nextSlide() {
   currentIndex = (currentIndex + 1) % currentImages.length;
   renderSlide();
 }
+
 function prevSlide() {
   if (!currentImages.length) return;
-  currentIndex =
-    (currentIndex - 1 + currentImages.length) % currentImages.length;
+  currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
   renderSlide();
 }
 
-// Abrir modal con "Ver fotos"
-$$(".js-photos").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const card = btn.closest(".card");
+$$(".js-photos").forEach((button) => {
+  button.addEventListener("click", () => {
+    const card = button.closest(".card");
     const title = card?.dataset?.name || "Fotos";
-    const imgs = parseImages(card);
-    if (!imgs.length) return;
-    openModal(title, imgs);
+    const images = parseImages(card);
+    if (!images.length) return;
+    openModal(title, images);
   });
 });
 
-// Navegación modal
-$(".modal-nav.next").addEventListener("click", nextSlide);
-$(".modal-nav.prev").addEventListener("click", prevSlide);
+if (nextButton) nextButton.addEventListener("click", nextSlide);
+if (prevButton) prevButton.addEventListener("click", prevSlide);
 
-// Cerrar modal (X o fondo)
-modal.addEventListener("click", (e) => {
-  const close = e.target?.dataset?.close === "true";
-  if (close) closeModal();
+if (modal) {
+  modal.addEventListener("click", (event) => {
+    const shouldClose = event.target?.dataset?.close === "true";
+    if (shouldClose) closeModal();
+  });
+}
+
+document.addEventListener("keydown", (event) => {
+  const isModalOpen = modal?.classList.contains("is-open");
+  if (!isModalOpen) return;
+
+  if (event.key === "Escape") closeModal();
+  if (event.key === "ArrowRight") nextSlide();
+  if (event.key === "ArrowLeft") prevSlide();
 });
 
-// Teclado (ESC / flechas)
-document.addEventListener("keydown", (e) => {
-  const open = modal.classList.contains("is-open");
-  if (!open) return;
+const sections = $$('main section[id]');
+const navLinks = $$('.menu a[href^="#"]');
 
-  if (e.key === "Escape") closeModal();
-  if (e.key === "ArrowRight") nextSlide();
-  if (e.key === "ArrowLeft") prevSlide();
-});
+if (sections.length && navLinks.length && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.getAttribute("id");
+        navLinks.forEach((link) => {
+          const isMatch = link.getAttribute("href") === `#${id}`;
+          link.classList.toggle("is-active", isMatch);
+        });
+      });
+    },
+    {
+      threshold: 0.35,
+      rootMargin: "-20% 0px -50% 0px"
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}

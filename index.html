@@ -3,26 +3,68 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="La casa del anotjo " />
-    <title>SweetHome | La casa del antojo</title>
+    <title>Sweet Home | Repostería casera por encargo</title>
     <meta
       name="description"
-      content="SweetHome: pasteles, pays, empanadas, brownies, besos de nuez, orajascas y fresas con crema. Cotiza por WhatsApp."
+      content="Sweet Home, La Casa del Antojo. Repostería casera por encargo con pasteles, pays, empanadas, brownies, hojarascas y fresas con crema. Haz tu pedido por WhatsApp."
     />
+    <meta
+      name="keywords"
+      content="repostería casera, pasteles por encargo, pays, brownies, fresas con crema, postres, Sweet Home"
+    />
+    <meta name="author" content="Sweet Home" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f9fb0" />
+
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sweet Home | Repostería casera por encargo" />
+    <meta
+      property="og:description"
+      content="Pasteles, pays, empanadas, brownies, hojarascas y más. Cotiza tu pedido por WhatsApp con Sweet Home."
+    />
+    <meta property="og:image" content="img/logo.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sweet Home | Repostería casera por encargo" />
+    <meta
+      name="twitter:description"
+      content="Antojos dulces hechos en casa para tus momentos especiales."
+    />
+    <meta name="twitter:image" content="img/logo.jpg" />
+
     <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Bakery",
+        "name": "Sweet Home",
+        "alternateName": "La Casa del Antojo",
+        "description": "Repostería casera por encargo con pasteles, pays, brownies, empanadas, fresas con crema y postres para ocasiones especiales.",
+        "image": "img/logo.jpg",
+        "telephone": "+52 81 2624 0070",
+        "priceRange": "$$",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61553038315831",
+          "https://www.instagram.com/sweethomelacasadelantojo/"
+        ],
+        "servesCuisine": "Postres",
+        "areaServed": "México"
+      }
+    </script>
   </head>
 
   <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-    <!-- HEADER -->
     <header class="site-header" id="inicio">
       <div class="container header-inner">
-        <a class="brand" href="#inicio" aria-label="Ir al inicio">
-          <img class="brand-logo" src="img/logo.jpg" alt="Logo de SweetHome" />
+        <a class="brand" href="#inicio" aria-label="Ir al inicio de Sweet Home">
+          <img class="brand-logo" src="img/logo.jpg" alt="Logo de Sweet Home" />
           <span class="brand-text">
-            <strong>SweetHome</strong>
-            <span class="brand-tagline">La casa del antojo</span>
+            <strong>Sweet Home</strong>
+            <span class="brand-tagline">La Casa del Antojo</span>
           </span>
         </a>
 
@@ -38,412 +80,292 @@
 
         <nav class="site-nav" aria-label="Navegación principal">
           <ul id="menu" class="menu">
+            <li><a href="#inicio">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
-            <li><a href="#temporada">Temporada</a></li>
             <li><a href="#como-pedir">Cómo pedir</a></li>
-            <li><a href="#redes">Redes</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
           </ul>
         </nav>
       </div>
 
-      <!-- HERO -->
-      <section class="hero" aria-label="Presentación">
-        <div class="container hero-grid" id="contenido">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="kicker">Repostería hogareña</p>
-            <h1>Antojos dulces hechos en casa, listos para tu día.</h1>
+            <p class="eyebrow">Repostería casera • pedidos por encargo</p>
+            <h1 id="hero-title">Postres que hacen sentir cada momento más especial.</h1>
             <p class="lead">
-              Pasteles, pays, empanadas, brownies, besos de nuez, orajascas y
-              fresas con crema con toppings. Cotiza rápido por WhatsApp.
+              En <strong>Sweet Home</strong> preparamos antojos dulces con una
+              presentación cuidada y sabor casero. Encuentra pasteles, pays,
+              empanadas, brownies, hojarascas y fresas con crema para regalar,
+              compartir o consentirte.
             </p>
 
             <div class="hero-cta">
               <a
                 class="btn primary"
                 id="waMain"
-                href="https://wa.me/528126240070?text=Hola%20SweetHome%2C%20quiero%20cotizar%20un%20pedido%20%F0%9F%8D%B0"
+                href="https://wa.me/528126240070?text=Hola%20Sweet%20Home%2C%20quiero%20cotizar%20un%20pedido%20%F0%9F%8D%B0"
                 target="_blank"
                 rel="noopener"
               >
                 Cotizar por WhatsApp
               </a>
-              <a class="btn ghost" href="#productos">Ver productos</a>
+              <a class="btn ghost" href="#productos">Ver menú</a>
             </div>
 
-            <ul class="hero-badges" aria-label="Beneficios">
-              <li>Hecho al momento</li>
-              <li>Por encargo</li>
-              <li>Entrega / recolección</li>
+            <ul class="hero-badges" aria-label="Beneficios del servicio">
+              <li>Hecho por encargo</li>
+              <li>Diseños personalizados</li>
+              <li>Atención por WhatsApp</li>
             </ul>
           </div>
 
-          <div class="hero-media" aria-label="Imagen destacada">
-            <div class="hero-card">
+          <aside class="hero-panel" aria-label="Resumen del negocio">
+            <div class="hero-card hero-card-logo">
               <img
-                src="img/pastel.jpg"
-                alt="Postres de SweetHome"
-                loading="lazy"
+                src="img/logo.jpg"
+                alt="Identidad visual de Sweet Home"
+                loading="eager"
               />
-              <div class="hero-card-caption">
-                <strong>Pedidos personalizados</strong>
-                <span>Pregunta por tamaños, sabores y toppings</span>
-              </div>
             </div>
-          </div>
+
+            <div class="hero-card hero-card-info">
+              <h2>Lo que nos distingue</h2>
+              <ul class="feature-list">
+                <li>Sabor casero con presentación moderna</li>
+                <li>Opciones ideales para cumpleaños, reuniones y regalos</li>
+                <li>Cotización rápida y atención cercana</li>
+              </ul>
+            </div>
+          </aside>
         </div>
       </section>
     </header>
 
-    <!-- MAIN -->
-    <main class="site-main">
-      <!-- PRODUCTOS -->
-      <section class="section" id="productos" aria-labelledby="productos-title">
-        <div class="container">
-          <header class="section-head">
-            <h2 id="productos-title">Productos</h2>
+    <main id="contenido" class="site-main" tabindex="-1">
+      <section class="section about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <article>
+            <header class="section-head">
+              <p class="section-kicker">Sobre Sweet Home</p>
+              <h2 id="about-title">Postres hechos con cariño para cada ocasión</h2>
+            </header>
             <p>
-              Explora por categorías. Cada producto tiene fotos y cotización
-              directa por WhatsApp.
+              En <strong>Sweet Home</strong> buscamos que cada pedido tenga ese toque casero
+              que se disfruta desde la primera vista hasta el último bocado. Preparamos
+              opciones dulces para compartir en familia, regalar o acompañar tus momentos especiales.
+            </p>
+            <p>
+              Nuestro enfoque es ofrecer sabores que se sientan cercanos, una presentación
+              cuidada y atención personalizada para que cada cliente encuentre justo lo que necesita.
+            </p>
+          </article>
+
+          <div class="about-panel">
+            <div class="metric">
+              <span class="metric-value">Hecho</span>
+              <span class="metric-label">Por encargo y con detalle</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">Sabor</span>
+              <span class="metric-label">Casero y especial</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">Atención</span>
+              <span class="metric-label">Cercana por WhatsApp</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section menu-section" id="productos" aria-labelledby="productos-title">
+        <div class="container">
+          <header class="section-head centered">
+            <p class="section-kicker">Menú</p>
+            <h2 id="productos-title">Nuestros productos</h2>
+            <p>
+              Explora por categorías. Cada tarjeta puede abrir fotos y enviar una cotización directa por WhatsApp.
             </p>
           </header>
 
-          <!-- Categorías colapsables: menos abrumador -->
-          <div
-            class="accordions"
-            role="region"
-            aria-label="Categorías de productos"
-          >
-            <!-- PASTELES -->
+          <div class="accordions" role="region" aria-label="Categorías de productos de Sweet Home">
             <details class="acc" open>
               <summary class="acc-summary">Pasteles</summary>
               <div class="acc-body cards">
-                <article
-                  class="card"
-                  data-name="Pastel de zanahoria"
-                  data-images="img/pastel.jpg,img/pastel2.jpg"
-                >
-                  <img
-                    src="img/pastel.jpg"
-                    alt="Pastel de zanahoria"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Pastel de zanahoria" data-images="img/pastel.jpg,img/pastel2.jpg">
+                  <img src="img/pastel.jpg" alt="Pastel de zanahoria decorado" loading="lazy" />
                   <div class="card-body">
                     <h3>Pastel de zanahoria</h3>
-                    <p>Esponjoso y casero. Ideal para evento o antojo.</p>
+                    <p>Esponjoso, casero y perfecto para compartir en cualquier ocasión.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
 
-                <article
-                  class="card"
-                  data-name="Pastel Lotus"
-                  data-images="img/pastel_lotus.jpg"
-                >
-                  <img
-                    src="img/pastel_lotus.jpg"
-                    alt="Pastel Lotus"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Pastel Lotus" data-images="img/pastel_lotus.jpg">
+                  <img src="img/pastel_lotus.jpg" alt="Pastel Lotus de Sweet Home" loading="lazy" />
                   <div class="card-body">
                     <h3>Pastel Lotus</h3>
-                    <p>Toque especial con Lotus. Pregunta por tamaño.</p>
+                    <p>Con un toque especial, ideal para quienes buscan algo diferente.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
               </div>
             </details>
 
-            <!-- PAYS (subtipos) -->
             <details class="acc">
               <summary class="acc-summary">Pays</summary>
               <div class="acc-body cards">
-                <article
-                  class="card"
-                  data-name="Pay de fresa"
-                  data-images="img/pay_fresa.jpg"
-                >
-                  <img
-                    src="img/pay_fresa.jpg"
-                    alt="Pay de fresa"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Pay de fresa" data-images="img/pay_fresa.jpg">
+                  <img src="img/pay_fresa.jpg" alt="Pay de fresa" loading="lazy" />
                   <div class="card-body">
                     <h3>Pay de fresa</h3>
-                    <p>Cremoso y fresco. Ideal para compartir.</p>
+                    <p>Cremoso y fresco, ideal para reuniones o para consentirte.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
 
-                <article
-                  class="card"
-                  data-name="Pay de mango"
-                  data-images="img/pay_mango.jpg"
-                >
-                  <img
-                    src="img/pay_mango.jpg"
-                    alt="Pay de mango"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Pay de mango" data-images="img/pay_mango.jpg">
+                  <img src="img/pay_mango.jpg" alt="Pay de mango" loading="lazy" />
                   <div class="card-body">
                     <h3>Pay de mango</h3>
-                    <p>Dulce y tropical. Pregunta por disponibilidad.</p>
+                    <p>Una opción tropical y dulce con excelente presentación.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
 
-                <article
-                  class="card"
-                  data-name="Pay de kiwi"
-                  data-images="img/pay_kiwi.jpg"
-                >
-                  <img
-                    src="img/pay_kiwi.jpg"
-                    alt="Pay de kiwi"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Pay de kiwi" data-images="img/pay_kiwi.jpg">
+                  <img src="img/pay_kiwi.jpg" alt="Pay de kiwi" loading="lazy" />
                   <div class="card-body">
                     <h3>Pay de kiwi</h3>
-                    <p>Toque ácido y delicioso. Pregunta por tamaño.</p>
+                    <p>Fresco, ligero y con un toque ácido que resalta su sabor.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
 
-                <article
-                  class="card"
-                  data-name="Pay tortuga"
-                  data-images="img/pay_tortuga.jpg,img/pay_tortuga2.jpg"
-                >
-                  <img
-                    src="img/pay_tortuga.jpg"
-                    alt="Pay tortuga"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Pay tortuga" data-images="img/pay_tortuga.jpg,img/pay_tortuga2.jpg">
+                  <img src="img/pay_tortuga.jpg" alt="Pay tortuga" loading="lazy" />
                   <div class="card-body">
                     <h3>Pay tortuga</h3>
-                    <p>cajeta + nuez . Pregunta por versión.</p>
+                    <p>Una mezcla de cajeta y nuez con un sabor clásico y antojable.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
               </div>
             </details>
 
-            <!-- EMPANADAS (subtipos) -->
             <details class="acc">
               <summary class="acc-summary">Empanadas</summary>
               <div class="acc-body cards">
-                <article
-                  class="card"
-                  data-name="Empanada de cajeta"
-                  data-images="img/empanada_cajeta.jpg"
-                >
-                  <img
-                    src="img/empanada_cajeta.jpg"
-                    alt="Empanada de cajeta"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Empanada de cajeta" data-images="img/empanada_cajeta.jpeg">
+                  <img src="img/empanada_cajeta.jpeg" alt="Empanada de cajeta" loading="lazy" />
                   <div class="card-body">
                     <h3>Empanada de cajeta</h3>
-                    <p>Tradicional y doradita. Ideal para acompañar café.</p>
+                    <p>Tradicional, doradita y perfecta para acompañar café o leche.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
 
-                <article
-                  class="card"
-                  data-name="Empanada de piña"
-                  data-images="img/empanada_piña.jpg"
-                >
-                  <img
-                    src="img/empanada_piña.jpg"
-                    alt="Empanada de piña"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Empanada de piña" data-images="img/empanada_piña.jpg">
+                  <img src="img/empanada_piña.jpg" alt="Empanada de piña" loading="lazy" />
                   <div class="card-body">
                     <h3>Empanada de piña</h3>
-                    <p>Dulce y casera. Pide por pieza o por docena.</p>
+                    <p>Un sabor dulce y casero que funciona muy bien por pieza o por docena.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
 
-                <article
-                  class="card"
-                  data-name="Empanada de fresa"
-                  data-images="img/empanada_fresa.jpg"
-                >
-                  <img
-                    src="img/empanada_fresa.jpg"
-                    alt="Empanada de fresa"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Empanada de fresa" data-images="img/empanada_fresa.jpg">
+                  <img src="img/empanada_fresa.jpg" alt="Empanada de fresa" loading="lazy" />
                   <div class="card-body">
                     <h3>Empanada de fresa</h3>
-                    <p>Relleno dulce y suave. Pregunta por disponibilidad.</p>
+                    <p>Relleno suave y dulce para quienes prefieren sabores más frutales.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
               </div>
             </details>
 
-            <!-- POSTRES -->
             <details class="acc">
               <summary class="acc-summary">Postres</summary>
               <div class="acc-body cards">
-                <article
-                  class="card"
-                  data-name="Brownies"
-                  data-images="img/brownie.jpg,img/brownie_2.jpg,img/brownie_3.jpg"
-                >
-                  <img src="img/brownie.jpg" alt="Brownies" loading="lazy" />
+                <article class="card" data-name="Brownies" data-images="img/brownie.jpg,img/brownie_2.jpg,img/brownie_3.jpg">
+                  <img src="img/brownie.jpg" alt="Brownies de chocolate" loading="lazy" />
                   <div class="card-body">
                     <h3>Brownies</h3>
-                    <p>Clásicos o con topping. Pide por pieza o charola.</p>
+                    <p>Clásicos o con topping, ideales para pedir por pieza o por charola.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
 
-                <article
-                  class="card"
-                  data-name="Besos de nuez"
-                  data-images="img/beso_nuez.jpg,img/beso_nuez_2.jpg"
-                >
-                  <img
-                    src="img/beso_nuez.jpg"
-                    alt="Besos de nuez"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Besos de nuez" data-images="img/beso_nuez.jpg,img/beso_nuez_2.jpg">
+                  <img src="img/beso_nuez.jpg" alt="Besos de nuez" loading="lazy" />
                   <div class="card-body">
                     <h3>Besos de nuez</h3>
-                    <p>Suavecitos y dulces. Ideales para regalar.</p>
+                    <p>Suaves, dulces y muy bonitos para acompañar una mesa de postres.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
 
-                <article
-                  class="card"
-                  data-name="Hojarascas"
-                  data-images="img/Hojarasca.jpg,img/Hojarasca_2.jpg"
-                >
-                  <img
-                    src="img/Hojarasca.jpg"
-                    alt="HOrajascas"
-                    loading="lazy"
-                  />
+                <article class="card" data-name="Hojarascas" data-images="img/Hojarasca.jpg,img/Hojarasca_2.jpg">
+                  <img src="img/Hojarasca.jpg" alt="Hojarascas caseras" loading="lazy" />
                   <div class="card-body">
                     <h3>Hojarascas</h3>
-                    <p>Tradición casera. Crujientes y deliciosas.</p>
+                    <p>Tradición, textura crujiente y sabor casero en cada pieza.</p>
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
 
-                <!-- FRESAS CON CREMA con toppings (subtipos) -->
                 <article
                   class="card"
                   data-name="Fresas con crema"
                   data-images="img/fresas.jpg,img/fresa_ferrero.jpg,img/fresa_bubulubu.jpg,img/fresa_pay.jpg,img/fresa_pinguino.jpg"
-                  data-options="Ferrero,Bubulubu,Pay de queso,Pingüino"
+                  data-options="Ferrero,Bubulubu,Gansito,Pay de queso"
                 >
-                  <img
-                    src="img/fresas.jpg"
-                    alt="Fresas con crema"
-                    loading="lazy"
-                  />
+                  <img src="img/fresas.jpg" alt="Fresas con crema" loading="lazy" />
                   <div class="card-body">
                     <h3>Fresas con crema</h3>
-                    <p>
-                      Elige topping: Ferrero, Bubulubu, Gansito o Pay de queso.
-                    </p>
+                    <p>Elige tu topping favorito y cotiza la presentación que más te guste.</p>
 
                     <div class="option-row">
-                      <label class="sr-only" for="opt-fresas">Topping</label>
-                      <select
-                        class="select js-option"
-                        id="opt-fresas"
-                        aria-label="Elige un topping"
-                      >
+                      <label class="sr-only" for="opt-fresas">Elige un topping</label>
+                      <select class="select js-option" id="opt-fresas" aria-label="Elige un topping">
                         <option value="">Elige topping…</option>
                         <option>Ferrero</option>
                         <option>Bubulubu</option>
@@ -453,12 +375,8 @@
                     </div>
 
                     <div class="card-actions">
-                      <button class="btn small ghost js-photos" type="button">
-                        Ver fotos
-                      </button>
-                      <button class="btn small primary js-quote" type="button">
-                        Cotizar
-                      </button>
+                      <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                      <button class="btn small primary js-quote" type="button">Cotizar</button>
                     </div>
                   </div>
                 </article>
@@ -468,55 +386,35 @@
         </div>
       </section>
 
-      <!-- TEMPORADA -->
-      <section
-        class="section alt"
-        id="temporada"
-        aria-labelledby="temporada-title"
-      >
+      <section class="section alt" aria-labelledby="temporada-title">
         <div class="container">
-          <header class="section-head">
-            <h2 id="temporada-title">Temporada</h2>
-            <p>Disponibles en fechas especiales. Cotiza por WhatsApp.</p>
+          <header class="section-head centered">
+            <p class="section-kicker">Fechas especiales</p>
+            <h2 id="temporada-title">Productos de temporada</h2>
+            <p>Descubre opciones especiales que aparecen en fechas importantes y temporadas del año.</p>
           </header>
 
-          <div class="cards">
-            <article
-              class="card"
-              data-name="Champurrado"
-              data-images="img/champurrado.jpg"
-            >
+          <div class="cards two-col">
+            <article class="card" data-name="Champurrado" data-images="img/champurrado.jpg">
               <img src="img/champurrado.jpg" alt="Champurrado" loading="lazy" />
               <div class="card-body">
                 <h3>Champurrado</h3>
-                <p>Para días fríos. Pregunta por porciones o litro.</p>
+                <p>Ideal para días fríos y reuniones especiales, con ese sabor tradicional que reconforta.</p>
                 <div class="card-actions">
-                  <button class="btn small ghost js-photos" type="button">
-                    Ver fotos
-                  </button>
-                  <button class="btn small primary js-quote" type="button">
-                    Cotizar
-                  </button>
+                  <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                  <button class="btn small primary js-quote" type="button">Cotizar</button>
                 </div>
               </div>
             </article>
 
-            <article
-              class="card"
-              data-name="Rosca de Reyes"
-              data-images="img/rosca.jpg"
-            >
+            <article class="card" data-name="Rosca de Reyes" data-images="img/rosca.jpg">
               <img src="img/rosca.jpg" alt="Rosca de Reyes" loading="lazy" />
               <div class="card-body">
                 <h3>Rosca de Reyes</h3>
-                <p>Aparta con tiempo. Pregunta por tamaños.</p>
+                <p>Perfecta para compartir en familia y apartar con anticipación en temporada.</p>
                 <div class="card-actions">
-                  <button class="btn small ghost js-photos" type="button">
-                    Ver fotos
-                  </button>
-                  <button class="btn small primary js-quote" type="button">
-                    Cotizar
-                  </button>
+                  <button class="btn small ghost js-photos" type="button">Ver fotos</button>
+                  <button class="btn small primary js-quote" type="button">Cotizar</button>
                 </div>
               </div>
             </article>
@@ -524,113 +422,146 @@
         </div>
       </section>
 
-      <!-- CÓMO PEDIR -->
-      <section class="section" id="como-pedir" aria-labelledby="pedir-title">
+      <section class="section steps-section" id="como-pedir" aria-labelledby="pedir-title">
         <div class="container">
-          <header class="section-head">
-            <h2 id="pedir-title">Cómo pedir</h2>
-            <p>En 3 pasos: eliges, cotizas por WhatsApp y confirmas.</p>
+          <header class="section-head centered">
+            <p class="section-kicker">Proceso</p>
+            <h2 id="pedir-title">Cómo hacer tu pedido</h2>
+            <p>Queremos que hacer tu pedido sea algo fácil, rápido y claro.</p>
           </header>
 
           <ol class="steps">
             <li class="step">
               <span class="step-num" aria-hidden="true">1</span>
               <div class="step-body">
-                <h3>Elige producto</h3>
-                <p>Revisa categorías y abre fotos si quieres ver más.</p>
+                <h3>Elige tu producto</h3>
+                <p>Revisa las categorías, abre fotos y decide qué postre quieres cotizar.</p>
               </div>
             </li>
             <li class="step">
               <span class="step-num" aria-hidden="true">2</span>
               <div class="step-body">
-                <h3>Cotiza por WhatsApp</h3>
-                <p>Te mandamos precio, disponibilidad y tiempo de entrega.</p>
+                <h3>Escríbenos por WhatsApp</h3>
+                <p>Con un clic puedes pedir precio, disponibilidad y tiempo de entrega.</p>
               </div>
             </li>
             <li class="step">
               <span class="step-num" aria-hidden="true">3</span>
               <div class="step-body">
-                <h3>Confirma</h3>
-                <p>Acordamos fecha, entrega o recolección.</p>
+                <h3>Confirma tu pedido</h3>
+                <p>Se acuerda fecha, entrega o recolección y tu pedido queda listo.</p>
               </div>
             </li>
           </ol>
         </div>
       </section>
 
-      <!-- REDES -->
-      <section class="section alt" id="redes" aria-labelledby="redes-title">
-        <div class="container">
+      <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+        <div class="container faq-grid">
           <header class="section-head">
-            <h2 id="redes-title">Síguenos</h2>
-            <p>Más fotos, promociones y productos nuevos en redes.</p>
+            <p class="section-kicker">Dudas frecuentes</p>
+            <h2 id="faq-title">Preguntas frecuentes</h2>
+            <p>
+              Aquí puedes resolver algunas de las dudas más comunes antes de hacer tu pedido.
+            </p>
           </header>
 
-          <div class="socials">
-            <!-- Cambia URLs reales -->
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary>¿Cómo puedo hacer un pedido?</summary>
+              <p>Puedes hacerlo directamente por WhatsApp desde los botones de cotización que aparecen en la página.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Los pedidos son personalizados?</summary>
+              <p>Sí. Puedes preguntar por tamaños, sabores, toppings y disponibilidad según el producto.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Manejan productos de temporada?</summary>
+              <p>Sí, hay productos especiales que se activan en fechas específicas como invierno o Día de Reyes.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Dónde puedo ver más fotos?</summary>
+              <p>En cada producto puedes abrir una pequeña galería o visitar las redes sociales para ver más contenido.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-section" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta-banner">
+            <div>
+              <p class="section-kicker">Haz tu pedido</p>
+              <h2 id="cta-title">Cotiza tu pedido por WhatsApp</h2>
+              <p>
+                Escríbenos para conocer precios, disponibilidad y opciones personalizadas para tu antojo o evento.
+              </p>
+            </div>
             <a
-              class="social"
-              href="https://www.facebook.com/profile.php?id=61553038315831"
+              class="btn primary"
+              href="https://wa.me/528126240070?text=Hola%20Sweet%20Home%2C%20quiero%20cotizar%20un%20pedido%20%F0%9F%8D%B0"
               target="_blank"
               rel="noopener"
             >
+              Pedir información
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="contacto" aria-labelledby="contacto-title">
+        <div class="container contact-grid">
+          <div>
+            <header class="section-head">
+              <p class="section-kicker">Contacto</p>
+              <h2 id="contacto-title">Conecta con Sweet Home</h2>
+              <p>
+                Estamos listas para atenderte y ayudarte a elegir el postre ideal para tu ocasión.
+              </p>
+            </header>
+
+            <address class="contact-card">
+              <p><strong>WhatsApp:</strong> <a href="https://wa.me/528126240070" target="_blank" rel="noopener">+52 81 2624 0070</a></p>
+              <p><strong>Instagram:</strong> <a href="https://www.instagram.com/sweethomelacasadelantojo/" target="_blank" rel="noopener">@sweethomelacasadelantojo</a></p>
+              <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61553038315831" target="_blank" rel="noopener">Sweet Home</a></p>
+            </address>
+          </div>
+
+          <div class="socials" aria-label="Redes sociales">
+            <a class="social" href="https://www.facebook.com/profile.php?id=61553038315831" target="_blank" rel="noopener">
               <strong>Facebook</strong>
-              <span class="muted">Ver publicaciones</span>
+              <span class="muted">Ver publicaciones y novedades</span>
             </a>
-
-            <a
-              class="social"
-              href="https://www.instagram.com/sweethomelacasadelantojo/"
-              target="_blank"
-              rel="noopener"
-            >
+            <a class="social" href="https://www.instagram.com/sweethomelacasadelantojo/" target="_blank" rel="noopener">
               <strong>Instagram</strong>
-              <span class="muted">Ver historias</span>
+              <span class="muted">Conoce más fotos y promociones</span>
             </a>
-
-            <a
-              class="social"
-              href="https://wa.me/528126240070?text=Hola%20SweetHome%2C%20quiero%20cotizar%20un%20pedido%20"
-              target="_blank"
-              rel="noopener"
-            >
+            <a class="social" href="https://wa.me/528126240070?text=Hola%20Sweet%20Home%2C%20quiero%20cotizar%20un%20pedido%20" target="_blank" rel="noopener">
               <strong>WhatsApp</strong>
-              <span class="muted">Cotizar pedido</span>
+              <span class="muted">Cotiza tu pedido al instante</span>
             </a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container footer-inner">
-        <p>© <span id="year"></span> SweetHome — La casa del antojo.</p>
+        <p>© <span id="year"></span> Sweet Home — La Casa del Antojo.</p>
         <ul class="footer-links">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#productos">Productos</a></li>
-          <li><a href="#redes">Redes</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </footer>
 
-    <!-- MODAL / LIGHTBOX -->
-    <div
-      class="modal"
-      id="modal"
-      aria-hidden="true"
-      role="dialog"
-      aria-label="Galería de fotos"
-    >
+    <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Galería de fotos">
       <div class="modal-backdrop" data-close="true"></div>
 
       <div class="modal-panel" role="document">
-        <button
-          class="modal-close"
-          type="button"
-          data-close="true"
-          aria-label="Cerrar"
-        >
+        <button class="modal-close" type="button" data-close="true" aria-label="Cerrar galería">
           ✕
         </button>
 
@@ -639,25 +570,13 @@
         </div>
 
         <div class="modal-body">
-          <button
-            class="modal-nav prev"
-            type="button"
-            aria-label="Foto anterior"
-          >
-            ‹
-          </button>
+          <button class="modal-nav prev" type="button" aria-label="Foto anterior">‹</button>
           <img id="modalImg" class="modal-img" src="" alt="" />
-          <button
-            class="modal-nav next"
-            type="button"
-            aria-label="Siguiente foto"
-          >
-            ›
-          </button>
+          <button class="modal-nav next" type="button" aria-label="Siguiente foto">›</button>
         </div>
 
         <div class="modal-footer">
-          <div id="modalDots" class="dots" aria-label="Indicadores"></div>
+          <div id="modalDots" class="dots" aria-label="Indicadores de galería"></div>
         </div>
       </div>
     </div>
